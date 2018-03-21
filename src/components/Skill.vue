@@ -1,63 +1,44 @@
 <template>
     <div class="skill">
-        <h2>{{ name }}</h2><br>
-        <small>{{ desc }}</small>
-        <div class="level">{{ level }}%</div>
+        <div class="infos">
+            <div class="heading">{{ name }}</div>
+            <div class="desc">{{ desc }}</div>
+        </div>
+        <div class="level">
+            {{ level }}%
+        </div>
     </div>
 </template>
 <script>
-    export default {
-        name: 'skill',
-        props: {
-            name: {
-                type: String,
-                default: 'Skill..'
-            },
-            desc : {
-                type: String,
-                default: 'Skill description'
-            },
-            img : {
-                type: String,
-                default: ''
-            },
-            level: {
-                type: Number,
-                default: 0
-            }
-        },
-        data: () => ({
-           showLevel: 0
-        }),
-        watch: {
-            'level'(oldLevel, newLevel) {
-                clearInterval(this.interval);
-
-                if(newLevel === this.showLevel){
-                    return;
-                }
-
-                this.interval = window.setInterval(function(){
-
-                    if(this.showLevel !== newLevel){
-
-                        var change = (newLevel - this.showLevel) / 10;
-
-                        change = change >= 0 ? Math.ceil(change) : Math.floor(change);
-
-                        this.showLevel = this.showLevel + change;
-
-                    }
-
-                }.bind(this), 20);
-            }
-        }
-    }
+  export default {
+    name: 'skill',
+    props: {
+      name: {
+        type: String,
+        default: 'Skill..'
+      },
+      desc: {
+        type: String,
+        default: 'Skill description'
+      },
+      img: {
+        type: String,
+        default: ''
+      },
+      level: {
+        type: Number,
+        default: 0
+      }
+    },
+    data: () => ({
+      showLevel: 0
+    })
+  }
 </script>
 <style scoped>
     .skill {
-        width: 300px;
-        height: 80px;
+        width: 100%;
+        min-height: 100px;
         display: inline-block;
         border: 2px solid #C62828;
         border-radius: 10px;
@@ -66,11 +47,25 @@
         margin: 10px;
     }
 
+    .skill .heading, .skill .infos {
+        display: inline-block;
+    }
+
+    .heading {
+        font-size: 24px;
+        font-weight: bold;
+        padding-bottom: 5px;
+    }
+
+    .infos {
+        max-width: 70%;
+    }
+
     .level {
         position: relative;
-        right: -75%;
-        top: -50%;
+        top: 50%;
+        float: right;
+        transform: translateY(-50%);
         font-size: 36px;
-        font-weight: 100;
     }
 </style>

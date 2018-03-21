@@ -1,10 +1,10 @@
 <template>
     <div id="app">
         <transition v-if="showMenus" name="fade" appear>
-            <div>
-                <Navbar></Navbar>
-                <Sidebar></Sidebar>
-            </div>
+            <Navbar></Navbar>
+        </transition>
+        <transition v-if="showMenus" name="fade" appear>
+            <Sidebar></Sidebar>
         </transition>
         <transition name="fade" appear>
             <router-view class="page-content"></router-view>
@@ -14,26 +14,26 @@
 </template>
 
 <script>
-    import Welcome from './components/views/Welcome/Welcome.vue'
-    import Navbar from './components/domains/Navigation/Navbar.vue'
-    import Footer from './components/domains/Footer/Footer.vue'
-    import Sidebar from './components/domains/Sidebar/Sidebar.vue'
+  import Welcome from './components/views/Welcome/Welcome.vue'
+  import Navbar from './components/domains/Navigation/Navbar.vue'
+  import Footer from './components/domains/Footer/Footer.vue'
+  import Sidebar from './components/domains/Sidebar/Sidebar.vue'
 
-    export default {
-        name: 'app',
-        components: {
-            Welcome,
-            Navbar,
-            Footer,
-            Sidebar
-        },
-        data: () => ({
-            showMenus: false
-        }),
-        mounted() {
-            setTimeout(() => (this.showMenus = true), 2000)
-        }
+  export default {
+    name: 'app',
+    components: {
+      Welcome,
+      Navbar,
+      Footer,
+      Sidebar
+    },
+    data: () => ({
+      showMenus: false
+    }),
+    mounted() {
+      setTimeout(() => (this.showMenus = true), 2000)
     }
+  }
 </script>
 
 <style>
@@ -67,11 +67,48 @@
         overflow: hidden;
     }
 
+    .navbar {
+        display: block;
+        width: auto;
+        float: right;
+        margin-right: 50px;
+        margin-top: 50px;
+    }
+
+    .sidebar {
+        position: relative;
+        top: 50%;
+        transform: translateY(-50%);
+        display: block;
+        float: left;
+    }
+
     .page-content {
-        position: absolute;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        position: fixed;
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
+        width: auto;
+        overflow-y: auto !important;
+        max-height: 60vh;
+    }
+
+    ::-webkit-scrollbar-track {
+        -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+        /*background-color: #F5F5F5;*/
+    }
+
+    ::-webkit-scrollbar {
+        width: 3px;
+        /*background-color: #F5F5F5;*/
+    }
+
+    ::-webkit-scrollbar-thumb {
+        background-color: #681212;
+        border: 2px solid #681212;
     }
 
     .fade-enter-active, .fade-leave-active {

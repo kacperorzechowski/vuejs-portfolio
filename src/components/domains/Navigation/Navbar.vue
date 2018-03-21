@@ -17,15 +17,11 @@
     </div>
 </template>
 <script>
-    export default {
-
-    }
+  export default {}
 </script>
 <style scoped>
     .navbar {
-        position: absolute;
-        top: 10%;
-        right: 10%;
+
     }
 
     ul {
