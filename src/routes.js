@@ -1,0 +1,33 @@
+import VueRouter from 'vue-router'
+import Welcome from './components/views/Welcome/Welcome.vue'
+import Projects from './components/views/Projects/Projects.vue'
+import Contact from './components/views/Contact/Contact.vue'
+import Skills from './components/views/Skills/Skills.vue'
+
+const router = new VueRouter({
+    mode: 'history',
+    routes: [
+        {
+            path: '/',
+            name: 'Welcome',
+            component: Welcome
+        },
+        {
+            path: '/skills',
+            name: 'Skills',
+            component: Skills
+        },
+        {
+            path: '/projects',
+            name: 'Projects',
+            component: Projects
+        },
+        {
+            path: '/contact',
+            name: 'Contact',
+            component: Contact
+        }
+    ]
+})
+
+export default router
