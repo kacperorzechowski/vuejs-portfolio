@@ -18,7 +18,6 @@
 </template>
 <script>
   import FontAwesomeIcon from '@fortawesome/vue-fontawesome'
-  import fontawesome from '@fortawesome/fontawesome'
   import brands from '@fortawesome/fontawesome-free-brands'
 
   export default {

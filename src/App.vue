@@ -76,11 +76,10 @@
     }
 
     .sidebar {
-        position: relative;
+        position: absolute;
         top: 50%;
         transform: translateY(-50%);
         display: block;
-        float: left;
     }
 
     .page-content {
@@ -92,23 +91,6 @@
         left: 50%;
         transform: translate(-50%, -50%);
         width: auto;
-        overflow-y: auto !important;
-        max-height: 60vh;
-    }
-
-    ::-webkit-scrollbar-track {
-        -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
-        /*background-color: #F5F5F5;*/
-    }
-
-    ::-webkit-scrollbar {
-        width: 3px;
-        /*background-color: #F5F5F5;*/
-    }
-
-    ::-webkit-scrollbar-thumb {
-        background-color: #681212;
-        border: 2px solid #681212;
     }
 
     .fade-enter-active, .fade-leave-active {
@@ -118,5 +100,21 @@
     .fade-enter, .fade-leave-to /* .fade-leave-active below version 2.1.8 */
     {
         opacity: 0;
+    }
+
+    @media(max-width: 1024px) {
+        .sidebar {
+            right: 0;
+        }
+        .page-content {
+            max-height: 80vh;
+            top: 100px;
+            transform: translate(-50%, 0);
+        }
+        .navbar {
+            margin-right: 0;
+            float: none;
+        }
+
     }
 </style>
