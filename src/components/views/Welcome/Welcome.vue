@@ -1,10 +1,10 @@
 <template>
     <div class="welcome-content">
         <div class="me">
-            <img src="../../../assets/me.jpg"/>
+            <img src="../../../../static/images/me.png"/>
+            <span class="my-name">Hey, I am Kacper.</span>
         </div>
         <div class="description">
-            <span class="my-name">Hi, I am Kacper.</span>
             <span class="rest-info">
                 I am 22 years old web developer living in Poland.
                 I love both, Front-End and Back-End.
@@ -15,12 +15,13 @@
     </div>
 </template>
 <script>
-  export default {}
+export default {}
 </script>
 <style scoped>
 
     .me {
         float: left;
+        line-height: 100px;
     }
 
     .me img {
@@ -28,6 +29,11 @@
         height: 100px;
         border-radius: 51%;
         border: 3px solid #F1F1F1;
+    }
+
+    .me .my-name {
+        font-size: 36px;
+        vertical-align: top;
     }
 
     .description {
@@ -47,5 +53,51 @@
         font-weight: 100;
         line-height: 1.3;
         word-spacing: 4px;
+    }
+    @media(max-width: 1024px) {
+        .description {
+            font-size: 14px;
+        }
+        .me {
+            float: none;
+            margin: 0 auto;
+        }
+
+        .welcome-content {
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+    }
+    @media (max-width: 805px) {
+        .welcome-content {
+            width: 80vw;
+            margin-left: -30px;
+        }
+    }
+
+    @media (max-width: 500px) {
+        .me img {
+            display: block;
+            height: 125px;
+            width: 125px;
+            position: relative;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        .me .my-name {
+            font-size: 30px;
+            text-align: left;
+
+        }
+        .me {
+            line-height: 45px;
+        }
+    }
+
+    @media (max-width: 333px) {
+        .me .my-name {
+            font-size: 26px;
+        }
     }
 </style>

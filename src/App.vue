@@ -30,7 +30,7 @@
     data: () => ({
       showMenus: false
     }),
-    mounted() {
+    mounted () {
       setTimeout(() => (this.showMenus = true), 2000)
     }
   }
@@ -50,7 +50,7 @@
         display: block;
         width: 100%;
         height: 100%;
-        background: url('./assets/nature.jpg') center no-repeat;
+        background: url('../static/images/nature.jpg') center no-repeat;
         -webkit-background-size: cover;
         background-size: cover;
         filter: grayscale(55%);
@@ -91,6 +91,7 @@
         left: 50%;
         transform: translate(-50%, -50%);
         width: auto;
+        overflow-y: auto;
     }
 
     .fade-enter-active, .fade-leave-active {

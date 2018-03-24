@@ -1,6 +1,6 @@
 <template>
     <div>
-        <h1>contact fsdf sd fsdf dsf sdf sf </h1>
+        Content will be here.. soon ;)
     </div>
 </template>
 <script>

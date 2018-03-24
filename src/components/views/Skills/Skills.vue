@@ -1,13 +1,12 @@
 <template>
     <div class="skills">
-        <!--<Skill v-for="skillInfo in skills" v-bind="skillInfo"></Skill>-->
         <div class="languages">
             <div class="heading">
                 <font-awesome-icon class="icon" :icon="faPlus"/>
                 Languages
             </div>
             <ul>
-                <li v-for="language in languages">
+                <li v-for="language in languages" :key="language.name">
                     <div class="skill-name">{{ language.name }}</div>
                     <div>
                         <LevelProgress :value="language.level"></LevelProgress>
@@ -19,14 +18,14 @@
         <div class="frameworks">
             <div class="heading">
                 <font-awesome-icon class="icon" :icon="faPlus"/>
-                Frameworks/Libraries
+                Libraries
             </div>
             <ul>
-                <li v-for="framework in frameworks">
-                    <div class="skill-name">{{ framework.name }}</div>
+                <li v-for="library in libraries" :key="library.name">
+                    <div class="skill-name">{{ library.name }}</div>
                     <div>
-                        <LevelProgress :value="framework.level"></LevelProgress>
-                        <div class="level">{{ framework.level }}%</div>
+                        <LevelProgress :value="library.level"></LevelProgress>
+                        <div class="level">{{ library.level }}%</div>
                     </div>
                 </li>
             </ul>
@@ -34,87 +33,70 @@
     </div>
 </template>
 <script>
-    import Skill from '../../domains/Skills/Skill.vue'
-    import LevelProgress from '../../domains/Skills/LevelProgress.vue'
-    import FontAwesomeIcon from '@fortawesome/vue-fontawesome'
-    import faPlus from '@fortawesome/fontawesome-free-solid/faPlus'
+  import LevelProgress from '../../domains/Common/LevelProgress.vue'
+  import FontAwesomeIcon from '@fortawesome/vue-fontawesome'
+  import faPlus from '@fortawesome/fontawesome-free-solid/faPlus'
 
-    export default {
-        name: 'Skills',
-        components: {Skill, FontAwesomeIcon, LevelProgress},
-        data: () => ({
-            languages: [
-                {
-                    name: 'PHP 5.6, 7.0+',
-                    level: 90
-                },
-                {
-                    name: 'Vanilla JavaScript',
-                    level: 40
-                },
-                {
-                    name: 'HTML5',
-                    level: 90
-                },
-                {
-                    name: 'CSS3',
-                    level: 80
-                },
-                {
-                    name: 'SQL, PL/SQL',
-                    level: 60
-                }
-
-//                {
-//                    name: 'RWD',
-//                    desc: 'I am able to create Responsive Websites',
-//                    level: 80
-//                },
-//                {
-//                    name: 'GIT',
-//                    desc: 'I am familiar with Version Control System like GIT',
-//                    level: 60
-//                },
-//                {
-//                    name: 'SQL/Databases',
-//                    desc: 'I have worked with Postgresql, MySql, Oracle and MSSQL',
-//                    level: 50
-//                },
-//                {
-//                    name: 'Linux',
-//                    desc: 'Basic knowledge of Linux Ecosystem',
-//                    level: 30
-//                }
-            ],
-            frameworks: [
-                {
-                    name: 'Laravel 5.6+',
-                    level: 75
-                },
-                {
-                    name: 'Vue.js 2.x',
-                    level: 60
-                },
-                {
-                    name: 'Bootstrap',
-                    level: 70
-                },
-                {
-                    name: 'jQuery',
-                    level: 60
-                },
-            ]
-        }),
-        computed: {
-            faPlus() {
-                return faPlus
-            }
+  export default {
+    name: 'ListGroup',
+    props: ['leftColData', 'rightColData', 'leftColLabel', 'rightColLabel'],
+    components: {FontAwesomeIcon, LevelProgress},
+    computed: {
+      faPlus() {
+        return faPlus
+      }
+    },
+    data: () => ({
+      languages: [
+        {
+          name: 'PHP 5.6, 7.0+',
+          level: 45
+        },
+        {
+          name: 'JavaScript',
+          level: 30
+        },
+        {
+          name: 'HTML5',
+          level: 75
+        },
+        {
+          name: 'CSS3',
+          level: 60
+        },
+        {
+          name: 'SQL, PL/SQL',
+          level: 30
+        },
+        {
+          name: 'C#',
+          level: 15
         }
-    }
+      ],
+      libraries: [
+        {
+          name: 'Laravel 5.6+',
+          level: 40
+        },
+        {
+          name: 'Vue.js 2.0+',
+          level: 35
+        },
+        {
+          name: 'Bootstrap',
+          level: 50
+        },
+        {
+          name: 'jQuery',
+          level: 30
+        }
+      ]
+    })
+  }
 </script>
 <style scoped>
     .languages, .frameworks {
-        min-width: 400px;
+        min-width: 250px;
     }
 
     .heading {
@@ -131,6 +113,7 @@
 
     ul {
         list-style: none;
+        padding-left: 20px;
     }
 
     ul li {
@@ -144,7 +127,8 @@
         flex-direction: row;
         flex-wrap: wrap;
         text-align: left;
-        justify-content: flex-end;
+        justify-content: center;
+        width: 100%;
     }
 
     .level {
@@ -158,18 +142,20 @@
         font-size: 18px
     }
 
-    @media(max-width: 1024px) {
+    @media (max-width: 1024px) {
         .heading {
             font-size: 20px;
-            margin-left: 20px;
+            margin-left: 10px;
         }
+
         .skill-name {
             font-size: 14px;
         }
     }
-    @media(max-width: 374px) {
+
+    @media (max-width: 374px) {
         .skills {
-            margin-left: 30px;
+            margin-left: -30px;
         }
     }
 </style>

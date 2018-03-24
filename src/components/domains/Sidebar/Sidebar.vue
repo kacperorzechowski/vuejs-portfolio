@@ -2,16 +2,16 @@
     <div class="sidebar">
         <ul>
             <li>
-                <font-awesome-icon :icon="['fab', 'github']"/>
+                <a href="https://github.com/kacperorzechowski"><font-awesome-icon :icon="['fab', 'github']"/></a>
             </li>
             <li>
-                <font-awesome-icon :icon="['fab', 'twitter']"/>
+                <a href="https://twitter.com/k_orzechowski96"><font-awesome-icon :icon="['fab', 'twitter']"/></a>
             </li>
             <li>
-                <font-awesome-icon :icon="['fab', 'android']"/>
+                <a href="https://play.google.com/store/apps/details?id=com.KacperOrzechowski.dragSquare"><font-awesome-icon :icon="['fab', 'android']"/></a>
             </li>
             <li>
-                <font-awesome-icon :icon="['fab', 'linkedin']"/>
+                <a href="https://www.linkedin.com/in/kacperorzechowski/"><font-awesome-icon :icon="['fab', 'linkedin']"/></a>
             </li>
         </ul>
     </div>
@@ -28,8 +28,8 @@
   }
 </script>
 <style scoped>
-    .sidebar {
-
+    a, a:visited, a:active, a:link {
+        color: #b6b6b6;
     }
 
     ul {

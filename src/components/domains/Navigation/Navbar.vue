@@ -17,7 +17,7 @@
     </div>
 </template>
 <script>
-  export default {}
+export default {}
 </script>
 <style scoped>
     .navbar {
@@ -26,6 +26,7 @@
 
     ul {
         list-style: none;
+        padding: 0;
     }
 
     ul li {

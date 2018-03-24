@@ -1,6 +1,6 @@
 <template>
     <div>
-        <h1>Projects</h1>
+        Content will be here.. soon ;)
     </div>
 </template>
 <script>
