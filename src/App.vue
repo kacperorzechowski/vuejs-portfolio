@@ -80,6 +80,7 @@
         top: 50%;
         transform: translateY(-50%);
         display: block;
+        z-index: 3;
     }
 
     .page-content {
@@ -103,7 +104,7 @@
         opacity: 0;
     }
 
-    @media(max-width: 1024px) {
+    @media (max-width: 1024px) {
         .sidebar {
             right: 0;
         }
@@ -116,6 +117,17 @@
             margin-right: 0;
             float: none;
         }
+    }
 
+    @media (max-width: 400px) {
+        .navbar {
+            margin-top: 10px;
+            top: initial;
+            transform: initial;
+        }
+
+        .page-content {
+            top: 45px;
+        }
     }
 </style>

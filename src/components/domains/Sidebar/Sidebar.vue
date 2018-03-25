@@ -24,7 +24,6 @@
     components: {
       FontAwesomeIcon
     }
-
   }
 </script>
 <style scoped>

@@ -29,7 +29,7 @@
 
     @media(max-width: 1024px) {
         .level-progress {
-            width: 45%;
+            width: 60%;
         }
         .level-progress > div {
             height: 11px;
