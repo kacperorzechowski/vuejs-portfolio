@@ -41,29 +41,19 @@
         margin: 0;
     }
 
-    #app:before {
-        content: "";
+    #app {
         position: fixed;
-        z-index: -1;
-        left: 0;
-        top: 0;
         display: block;
         width: 100%;
         height: 100%;
         background: url('../static/images/nature.jpg') center no-repeat;
         -webkit-background-size: cover;
         background-size: cover;
-        filter: grayscale(55%);
-    }
-
-    #app {
         font-family: 'Avenir', Helvetica, Arial, sans-serif;
         -webkit-font-smoothing: antialiased;
         -moz-osx-font-smoothing: grayscale;
         text-align: center;
         color: #f1f1f1;
-        height: 100vh;
-        background: rgba(33, 27, 27, 0.9);
         overflow: hidden;
     }
 
@@ -121,13 +111,16 @@
 
     @media (max-width: 400px) {
         .navbar {
-            margin-top: 10px;
+            margin-top: 20px;
             top: initial;
             transform: initial;
         }
 
         .page-content {
             top: 45px;
+            margin-top: 20px;
+            max-height: 70vh;
+
         }
     }
 </style>
