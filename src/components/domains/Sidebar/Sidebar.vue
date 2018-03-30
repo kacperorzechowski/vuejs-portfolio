@@ -16,6 +16,7 @@
         </ul>
     </div>
 </template>
+
 <script>
   import FontAwesomeIcon from '@fortawesome/vue-fontawesome'
   import brands from '@fortawesome/fontawesome-free-brands'
@@ -26,6 +27,7 @@
     }
   }
 </script>
+
 <style scoped>
     a, a:visited, a:active, a:link {
         color: #b6b6b6;
@@ -43,5 +45,12 @@
     ul li svg:hover {
         color: #C62828;
         transition-duration: 0.3s;
+    }
+
+    @media(max-height: 400px) {
+        ul li {
+            font-size: 30px;
+            padding: 5px;
+        }
     }
 </style>

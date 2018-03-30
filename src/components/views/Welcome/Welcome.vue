@@ -14,10 +14,11 @@
         </div>
     </div>
 </template>
-<script>
-export default {}
-</script>
+
 <style scoped>
+    .welcome-content {
+        width: 60vw;
+    }
 
     .me {
         float: left;
@@ -63,9 +64,9 @@ export default {}
         }
 
         .welcome-content {
-            top: 50%;
+            /*top: 50%;*/
             left: 50%;
-            transform: translate(-50%, -50%);
+            transform: translateX(-50%);
         }
     }
     @media (max-width: 805px) {
@@ -97,6 +98,14 @@ export default {}
     @media (max-width: 333px) {
         .me .my-name {
             font-size: 26px;
+        }
+    }
+
+    @media (max-height: 400px) {
+
+        .welcome-content {
+            top: 50px;
+            overflow: auto;
         }
     }
 </style>

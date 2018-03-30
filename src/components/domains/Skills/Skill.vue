@@ -9,6 +9,7 @@
         </div>
     </div>
 </template>
+
 <script>
   export default {
     name: 'skill',
@@ -35,6 +36,7 @@
     })
   }
 </script>
+
 <style scoped>
     .skill {
         width: 100%;

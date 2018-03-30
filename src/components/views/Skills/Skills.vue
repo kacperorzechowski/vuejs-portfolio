@@ -32,6 +32,7 @@
         </div>
     </div>
 </template>
+
 <script>
   import LevelProgress from '../../domains/Common/LevelProgress.vue'
   import FontAwesomeIcon from '@fortawesome/vue-fontawesome'
@@ -94,6 +95,7 @@
     })
   }
 </script>
+
 <style scoped>
     .languages, .frameworks {
         min-width: 250px;

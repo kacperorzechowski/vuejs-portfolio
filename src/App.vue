@@ -77,11 +77,11 @@
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
+        width: 100%;
         position: fixed;
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
-        width: auto;
         overflow-y: auto;
     }
 
@@ -121,6 +121,16 @@
             margin-top: 20px;
             max-height: 70vh;
 
+        }
+    }
+
+    @media (max-height: 400px) {
+        .navbar {
+            margin-top: 10px;
+        }
+
+        .page-content {
+            top: 50px;
         }
     }
 </style>
