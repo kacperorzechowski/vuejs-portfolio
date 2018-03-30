@@ -11,7 +11,7 @@
                 Salesman is operating on Vue.js interface that communicates with Laravel which is providing and receiving data.
                 After validation Laravel sends request to Node to print the receipt.
             </div>
-            <div class="period">march 2018 - currently</div>
+            <div class="period">March 2018 - currently</div>
         </div>
 
         <div class="project">
@@ -26,7 +26,7 @@
                 Firstly, the Front End of application was written in Laravel Blades but afterwards we decided to rewrite it
                 as Single Page Application in Vue.js.
             </div>
-            <div class="period">August 2017 - march 2018</div>
+            <div class="period">August 2017 - March 2018</div>
         </div>
 
         <div class="project">
@@ -45,7 +45,7 @@
                 game for Android. The point of the game is to keep little square on screen. You get score every time you collide
                 with square on the middle.
             </div>
-            <div class="period">march 2017</div>
+            <div class="period">March 2017</div>
         </div>
 
         <div class="project">
@@ -159,7 +159,6 @@
 
     .important {
         color: #F4511E;
-        font-weight: bold;
     }
 
     @media (max-width: 400px) {
