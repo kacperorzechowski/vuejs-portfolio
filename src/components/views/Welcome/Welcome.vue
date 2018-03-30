@@ -28,6 +28,7 @@
     .me img {
         width: 100px;
         height: 100px;
+        margin-right: 5px;
         border-radius: 51%;
         border: 3px solid #F1F1F1;
     }
@@ -41,6 +42,7 @@
         display: inline-block;
         padding: 0 20px 0 20px;
         text-align: justify;
+        color: #c5c5c5;
     }
 
     .description .my-name {
@@ -61,12 +63,6 @@
         .me {
             float: none;
             margin: 0 auto;
-        }
-
-        .welcome-content {
-            /*top: 50%;*/
-            left: 50%;
-            transform: translateX(-50%);
         }
     }
     @media (max-width: 805px) {
@@ -98,14 +94,6 @@
     @media (max-width: 333px) {
         .me .my-name {
             font-size: 26px;
-        }
-    }
-
-    @media (max-height: 400px) {
-
-        .welcome-content {
-            top: 50px;
-            overflow: auto;
         }
     }
 </style>

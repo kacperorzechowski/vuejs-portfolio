@@ -1,12 +1,12 @@
 {
-  "name": "portfolio-webpack",
+  "name": "portfolio",
   "version": "1.0.0",
   "description": "A Vue.js project",
-  "author": "Kacper Orzechowski <kacper.orzechowski96@gmail.com>",
+  "author": "Kacper Orzechowski <www.kacpercodes.it>",
   "private": true,
   "scripts": {
     "dev": "webpack-dev-server --inline --progress --config build/webpack.dev.conf.js",
-    "dev-phone": "webpack-dev-server --inline --progress --host 192.168.0.64 --config build/webpack.dev.conf.js",
+    "dev-phone": "webpack-dev-server --inline --host 192.168.0.13 --progress --config build/webpack.dev.conf.js",
     "prod": "webpack-dev-server --inline --progress --config build/webpack.prod.conf.js",
     "start": "npm run dev",
     "unit": "jest --config test/unit/jest.conf.js --coverage",

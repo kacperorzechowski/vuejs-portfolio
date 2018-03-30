@@ -7,7 +7,7 @@
             <Sidebar></Sidebar>
         </transition>
         <transition name="fade" appear>
-            <router-view class="page-content"></router-view>
+            <router-view class="page-content" :class="{ safari: isSafari }"></router-view>
         </transition>
         <Footer></Footer>
     </div>
@@ -30,6 +30,11 @@
     data: () => ({
       showMenus: false
     }),
+    computed: {
+      isSafari() {
+        return /^((?!chrome|android).)*safari/i.test(navigator.userAgent)
+      }
+    },
     mounted () {
       setTimeout(() => (this.showMenus = true), 2000)
     }
@@ -100,10 +105,14 @@
         }
         .page-content {
             max-height: 80vh;
-            top: 100px;
-            transform: translate(-50%, 0);
+            top: 50%;
+            transform: translate(-50%, -50%);
+        }
+        .safari {
+            max-height: 70vh;
         }
         .navbar {
+            margin-top: 20px;
             margin-right: 0;
             float: none;
         }
@@ -111,16 +120,12 @@
 
     @media (max-width: 400px) {
         .navbar {
-            margin-top: 20px;
             top: initial;
             transform: initial;
         }
 
         .page-content {
-            top: 45px;
             margin-top: 20px;
-            max-height: 70vh;
-
         }
     }
 
@@ -130,7 +135,19 @@
         }
 
         .page-content {
-            top: 50px;
+            max-height: 75vh;
+        }
+        .safari {
+            max-height: 65vh;
+        }
+    }
+
+    @media (max-height: 345px) {
+        .page-content {
+            max-height: 60vh;
+        }
+        .safari {
+            max-height: 40vh;
         }
     }
 </style>

@@ -1,24 +1,23 @@
 <template>
     <div class="footer-content">
-        <ul>
-
-        </ul>
+        <img style="width: 16px; height: 16px" src="../../../../static/icons/favicon-32x32.png"/>
+        <span class="text">&copy; Kacper Orzechowski 2018</span>
     </div>
 </template>
 
 <style scoped>
-
-    .footer-content ul {
-        list-style: none;
+    .footer-content {
         position: absolute;
-        bottom: 10%;
+        bottom: 3px;
         left: 50%;
         transform: translateX(-50%);
+        width: 100%;
+        font-size: 13px;
+        color: #777;
     }
 
-    .footer-content ul li {
-        display: inline-block;
-        padding: 10px;
+    .text {
+        line-height: 16px;
+        vertical-align: top;
     }
-
 </style>

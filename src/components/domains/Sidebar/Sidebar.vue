@@ -47,7 +47,7 @@
         transition-duration: 0.3s;
     }
 
-    @media(max-height: 400px) {
+    @media (max-height: 400px) {
         ul li {
             font-size: 30px;
             padding: 5px;
