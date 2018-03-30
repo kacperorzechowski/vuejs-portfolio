@@ -77,11 +77,11 @@
       libraries: [
         {
           name: 'Laravel 5.6+',
-          level: 40
+          level: 50
         },
         {
           name: 'Vue.js 2.0+',
-          level: 35
+          level: 50
         },
         {
           name: 'Bootstrap',
